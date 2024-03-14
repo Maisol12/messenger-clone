@@ -58,7 +58,7 @@ const GroupChatModal: React.FC<GroupChatModalProps> = ({
       router.refresh();
       onClose();
     })
-    .catch(() => toast.error('Something went wrong!'))
+    .catch(() => toast.error('Hubo un error!'))
     .finally(() => setIsLoading(false));
   }
 
@@ -75,15 +75,15 @@ const GroupChatModal: React.FC<GroupChatModalProps> = ({
                 text-gray-900
               "
               >
-                Create a group chat
+                Crear un grupo
               </h2>
             <p className="mt-1 text-sm leading-6 text-gray-600">
-              Create a chat with more than 2 people.
+              Crea un grupo con tus amigos halcones.
             </p>
             <div className="mt-10 flex flex-col gap-y-8">
               <Input
                 disabled={isLoading}
-                label="Name" 
+                label="Nombre" 
                 id="name" 
                 errors={errors} 
                 required 
@@ -91,7 +91,7 @@ const GroupChatModal: React.FC<GroupChatModalProps> = ({
               />
               <Select
                 disabled={isLoading}
-                label="Members" 
+                label="Halcones" 
                 options={users.map((user) => ({ 
                   value: user.id, 
                   label: user.name 
@@ -111,10 +111,10 @@ const GroupChatModal: React.FC<GroupChatModalProps> = ({
             type="button"
             secondary
           >
-            Cancel
+            Cancelar
           </Button>
           <Button disabled={isLoading} type="submit">
-            Create
+            Crear
           </Button>
         </div>
       </form>

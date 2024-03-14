@@ -33,7 +33,7 @@ const Auth = () => {
             text-gray-900
           "
           >
-            Sign in to your account!
+            Hola ingresa a utezbook
         </h2>
       </div>
       <AuthForm />      

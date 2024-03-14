@@ -59,14 +59,14 @@ const AuthForm = () => {
       }))
       .then((callback) => {
         if (callback?.error) {
-          toast.error('Invalid credentials!');
+          toast.error('Credenciales invalidas!');
         }
 
         if (callback?.ok) {
           router.push('/conversations')
         }
       })
-      .catch(() => toast.error('Something went wrong!'))
+      .catch(() => toast.error('Hubo un error!'))
       .finally(() => setIsLoading(false))
     }
 
@@ -127,7 +127,7 @@ const AuthForm = () => {
               errors={errors}
               required
               id="name" 
-              label="Name"
+              label="Nombre"
             />
           )}
           <Input 
@@ -136,7 +136,7 @@ const AuthForm = () => {
             errors={errors}
             required
             id="email" 
-            label="Email address" 
+            label="Correo Electrónico" 
             type="email"
           />
           <Input 
@@ -145,12 +145,12 @@ const AuthForm = () => {
             errors={errors}
             required
             id="password" 
-            label="Password" 
+            label="Contraseña" 
             type="password"
           />
           <div>
             <Button disabled={isLoading} fullWidth type="submit">
-              {variant === 'LOGIN' ? 'Sign in' : 'Register'}
+              {variant === 'LOGIN' ? 'Iniciar sesion' : 'Register'}
             </Button>
           </div>
         </form>
@@ -169,7 +169,7 @@ const AuthForm = () => {
             </div>
             <div className="relative flex justify-center text-sm">
               <span className="bg-white px-2 text-gray-500">
-                Or continue with
+                O continuar con
               </span>
             </div>
           </div>
@@ -197,13 +197,13 @@ const AuthForm = () => {
           "
         >
           <div>
-            {variant === 'LOGIN' ? 'New to Messenger?' : 'Already have an account?'} 
+            {variant === 'LOGIN' ? 'Nuevo en UtezBook?' : 'Ya tienes una cuenta?'} 
           </div>
           <div 
             onClick={toggleVariant} 
             className="underline cursor-pointer"
           >
-            {variant === 'LOGIN' ? 'Create an account' : 'Login'}
+            {variant === 'LOGIN' ? 'Crear cuenta' : 'Login'}
           </div>
         </div>
       </div>
